@@ -1,9 +1,9 @@
 ---
 title: Hello Internet!
 description: My very first blog post
-date: 2024-01-10
+date: 2026-01-10
 ---
 
 ![website](/blog/hello_internet/website.png)
 
-Took me a while to get myself to actually finish my website. I do love the resulting look of it though. It is much inspired from [lukadev.me's](https://lukadev.me/) website. There is not going to be much here since what else is there to write - lol.
+Took me a while to get myself to actually finish my website. I do love the resulting look of it though. It is much inspired from [lukadev.me's](https://lukadev.me/) website.

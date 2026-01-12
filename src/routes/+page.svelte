@@ -1,8 +1,17 @@
 <script lang="ts">
-	import Technology from '$lib/components/Technology.svelte';
-	import projects from '$lib/projects.json';
-	import contributions from '$lib/contributions.json';
-	import { Github, Twitter, CloudUpload, Mail } from '@lucide/svelte';
+	import ExternalLink from '$lib/components/ExternalLink.svelte';
+	import Projects from './Projects.svelte';
+	import Contributions from './Contributions.svelte';
+	import { Github, Twitter, Mail, BookOpen } from '@lucide/svelte';
+	import { resolve } from '$app/paths';
+
+	// force enhance thumbnail images
+	import.meta.glob('/src/lib/assets/thumbnails/*.{png,jpg}', {
+		eager: true,
+		query: {
+			enhanced: true
+		}
+	});
 </script>
 
 <svelte:head>
@@ -23,129 +32,55 @@
 				</p>
 			</section>
 			<div class="mt-auto flex flex-col gap-2">
-				<a
-					href="https://github.com/metamethods"
-					class="default flex items-center gap-2 rounded-lg px-4 py-3 transition-[background-color] hover:bg-bg"
-				>
-					<article class="flex items-center gap-2">
-						<Github class="w-8" />
-						<div class="flex flex-col">
-							<p class="text-sm text-text-muted">Github</p>
-							<p class="font-medium">metamethods</p>
-						</div>
-					</article>
-				</a>
-				<a
-					href="https://x.com/__metamethods"
-					class="default flex items-center gap-2 rounded-lg px-4 py-3 transition-[background-color] hover:bg-bg"
-				>
-					<article class="flex items-center gap-2">
-						<Twitter class="w-8" />
-						<div class="flex flex-col">
-							<p class="text-sm text-text-muted">Twitter</p>
-							<p class="font-medium">__metamethods</p>
-						</div>
-					</article>
-				</a>
-				<a
-					href="mailto:tabledmetamethods@gmail.com"
-					class="default flex items-center gap-2 rounded-lg px-4 py-3 transition-[background-color] hover:bg-bg"
-				>
-					<article class="flex items-center gap-2">
-						<Mail class="w-8" />
-						<div class="flex flex-col">
-							<p class="text-sm text-text-muted">mailto</p>
-							<p class="font-medium">tabledmetamethods@gmail.com</p>
-						</div>
-					</article>
-				</a>
-				<a
-					href="https://files.metatable.sh/"
-					class="default flex items-center gap-2 rounded-lg px-4 py-3 transition-[background-color] hover:bg-bg"
-				>
-					<article class="flex items-center gap-2">
-						<CloudUpload class="w-8" />
-						<div class="flex flex-col">
-							<p class="text-sm text-text-muted">files.metatable.sh</p>
-							<p class="font-medium">Fileserver</p>
-						</div>
-					</article>
-				</a>
+				<ExternalLink
+					url={resolve('/blog/about')}
+					target="/blog/about"
+					text="About Me"
+					Icon={BookOpen}
+				/>
+				<ExternalLink
+					url="https://github.com/metamethods"
+					target="Github"
+					text="metamethods"
+					Icon={Github}
+				/>
+				<ExternalLink
+					url="https://x.com/__metamethods"
+					target="Twitter"
+					text="__metamethods"
+					Icon={Twitter}
+				/>
+				<ExternalLink
+					url="mailto:tabledmetamethods@gmail.com"
+					target="mailto"
+					text="meta@metatable.sh"
+					Icon={Mail}
+				/>
 			</div>
 		</div>
 	</div>
+
 	<div class="col-span-2 flex flex-col gap-16 p-16">
 		{#snippet seperator()}
 			<div
-				class="-ml-[calc((--spacing(16))+(--spacing(16)))] h-px w-[calc(100%+(--spacing(16))+(--spacing(16))+(--spacing(16)))] bg-border-muted"
+				class="-ml-[calc((--spacing(16))+(--spacing(16)))] h-px w-[calc(100%+(--spacing(16))+(--spacing(16))+(--spacing(16)))] bg-border"
 			></div>
 		{/snippet}
 
 		<section>
 			<h1 class="text-3xl font-bold text-primary lg:text-4xl">Projects</h1>
-			<p class="text-lg font-medium">Some silly projects that I have made</p>
-			<div class="mt-4 flex flex-col gap-4">
-				{#each projects as project, i (i)}
-					<a
-						href={project.url}
-						target="_blank"
-						title={project.title}
-						class="default col-auto -ml-4 rounded-lg px-4 pt-3 pb-4 transition-[background-color] hover:bg-bg"
-					>
-						<article>
-							<div class="flex flex-row items-center gap-2">
-								{#each project.technologies as technology, i (i)}
-									<Technology {technology} class="h-6 w-6" />
-								{/each}
-								<h1 class="text-lg font-semibold">
-									{project.title}
-								</h1>
-							</div>
-							<p class="text-text-muted">{project.description}</p>
-						</article>
-					</a>
-				{/each}
-
-				<a
-					href="https://github.com/metamethods"
-					class="default -ml-4 rounded-lg px-4 py-3 text-text-muted outline outline-border-muted transition-[background-color] outline-dashed hover:bg-bg hover:outline-transparent"
-					target="_blank"
-				>
-					Find more on my github profile
-				</a>
-			</div>
+			<p class="mb-4 text-lg font-medium">Some silly projects that I have made</p>
+			<Projects />
 		</section>
 
 		{@render seperator()}
 
 		<section>
 			<h1 class="text-3xl font-bold text-primary lg:text-4xl">Contributions</h1>
-			<p class="text-lg font-medium">Silly things that I have contributed on (or is currently)</p>
-			<div class="mt-4 flex flex-col gap-4">
-				{#each contributions as contribution, i (i)}
-					<a
-						href={contribution.url}
-						target="_blank"
-						title={contribution.title}
-						class="default col-auto -ml-4 rounded-lg p-4 transition-[background-color] hover:bg-bg"
-					>
-						<article class="flex flex-col gap-4 lg:flex-row">
-							<img src={contribution.thumbnail} alt={contribution.title} class="w-64 rounded-md" />
-							<div class="flex flex-col">
-								<h1 class="text-lg font-semibold">
-									{contribution.title}
-								</h1>
-								<p class="text-text-muted">{contribution.description}</p>
-								<p>
-									Contributed as a <span class="font-medium text-primary">{contribution.role}</span>
-									since
-									<span class="font-medium text-primary">{contribution.since}</span>
-								</p>
-							</div>
-						</article>
-					</a>
-				{/each}
-			</div>
+			<p class="mb-4 text-lg font-medium">
+				Silly things that I have contributed on (or is currently)
+			</p>
+			<Contributions />
 		</section>
 
 		{@render seperator()}
@@ -154,8 +89,8 @@
 			<h1 class="text-3xl font-bold text-primary lg:text-4xl">Blog Posts</h1>
 			<p class="mb-8 text-lg font-medium">Where I share out some silly stuff</p>
 			<a
-				href="/blog"
-				class="default rounded-lg bg-bg px-4 py-3 transition-[background-color] hover:bg-bg-light"
+				href={resolve('/blog')}
+				class="default rounded-lg bg-bg-1 px-4 py-3 transition-[background-color] hover:bg-bg-2"
 			>
 				Check it out
 			</a>

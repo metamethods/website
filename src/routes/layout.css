@@ -5,24 +5,21 @@
 	:root {
 		--header-height: --spacing(16);
 
-		/* lightmode colors are in reverse since light -> dark looks better than dark -> light imo */
-		--bg-dark: oklch(95% 0 0);
-		--bg: oklch(90% 0 0);
-		--bg-light: oklch(85% 0 0);
+		--bg-0: oklch(95% 1% 0);
+		--bg-1: oklch(90% 1% 0);
+		--bg-2: oklch(85% 1% 0);
+		--border: oklch(80% 1% 0);
 		--text: oklch(30% 0 0);
-		--text-muted: oklch(50% 0 0);
-		--border: oklch(70% 0 0);
-		--border-muted: oklch(80% 0 0);
+		--text-muted: oklch(40% 0 0);
 		--primary: oklch(69% 30.5% 18.1);
 
 		@variant dark {
-			--bg-dark: oklch(20% 0 0);
-			--bg: oklch(25% 0 0);
-			--bg-light: oklch(30% 0 0);
+			--bg-0: oklch(20% 0 0);
+			--bg-1: oklch(25% 0 0);
+			--bg-2: oklch(30% 0 0);
+			--border: oklch(35% 0 0);
 			--text: oklch(90% 0 0);
-			--text-muted: oklch(75% 0 0);
-			--border: oklch(50% 0 0);
-			--border-muted: oklch(35% 0 0);
+			--text-muted: oklch(80% 0 0);
 			--primary: oklch(83% 7.5% 2.4);
 		}
 	}
@@ -35,13 +32,12 @@
 @theme {
 	--default-font-family: 'Plus Jakarta Sans Variable', sans-serif;
 
-	--color-bg-dark: var(--bg-dark);
-	--color-bg: var(--bg);
-	--color-bg-light: var(--bg-light);
+	--color-bg-0: var(--bg-0);
+	--color-bg-1: var(--bg-1);
+	--color-bg-2: var(--bg-2);
 	--color-text: var(--text);
-	--color-text-muted: var(--text-muted);
 	--color-border: var(--border);
-	--color-border-muted: var(--border-muted);
+	--color-text-muted: var(--text-muted);
 	--color-primary: var(--primary);
 }
 
@@ -53,20 +49,20 @@
 	--tw-prose-bold: theme(color.text);
 	--tw-prose-counters: theme(color.text-muted);
 	--tw-prose-bullets: theme(color.text-muted);
-	--tw-prose-hr: theme(color.border-muted);
+	--tw-prose-hr: theme(color.border);
 	--tw-prose-quotes: theme(color.text-muted);
 	--tw-prose-quote-borders: theme(color.border);
 	--tw-prose-captions: theme(color.text-muted);
 	--tw-prose-code: theme(color.primary);
 	--tw-prose-pre-code: theme(color.text);
-	--tw-prose-pre-bg: theme(color.bg);
+	--tw-prose-pre-bg: theme(color.bg-1);
 	--tw-prose-th-borders: theme(color.border);
-	--tw-prose-td-borders: theme(color.border-muted);
+	--tw-prose-td-borders: theme(color.border);
 	--tw-prose-kbd: theme(color.primary);
 
 	.shiki,
 	.shiki span {
-		background-color: theme(color.bg) !important;
+		background-color: theme(color.bg-1) !important;
 
 		@variant dark {
 			color: var(--shiki-dark) !important;
@@ -81,10 +77,10 @@
 	}
 
 	kbd {
-		@apply rounded-lg bg-bg p-2;
+		@apply rounded-lg bg-bg-1 p-2;
 	}
 
 	img {
-		@apply rounded-lg outline outline-border-muted;
+		@apply rounded-lg outline outline-border;
 	}
 }

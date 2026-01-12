@@ -13,12 +13,13 @@
 	{#if page.url.pathname == '/'}
 		<title>metamethods</title>
 	{:else}
-		<title>{page.url.pathname.split('/').at(-1)} - metamethods</title>
+		<title>metamethods/{page.url.pathname.split('/').at(-1)}</title>
 	{/if}
+
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<header class="sticky inset-0 z-10 bg-bg-dark outline-1 outline-border">
+<header class="sticky inset-0 z-10 bg-bg-0 outline-1 outline-border">
 	<div class="mx-auto h-(--header-height) max-w-7xl px-6">
 		<Header />
 	</div>
@@ -26,7 +27,7 @@
 
 {@render children()}
 
-<footer class="bg-bg-dark outline-1 outline-border">
+<footer class="bg-bg-0 outline-1 outline-border">
 	<div class="mx-auto max-w-7xl p-6">
 		<Footer />
 	</div>

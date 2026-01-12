@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.frontmatter.title} - metamethods</title>
+	<title>metamethods/{data.frontmatter.title}</title>
 	<meta name="description" content={data.frontmatter.description} />
 </svelte:head>
 

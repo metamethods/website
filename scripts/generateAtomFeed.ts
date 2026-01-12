@@ -38,7 +38,7 @@ for (const fileName of await readdir(BLOG_POSTS_DIRECTORY)) {
 		.use(remarkParseFrontmatter)
 		.process(await readFile(`${BLOG_POSTS_DIRECTORY}/${fileName}`));
 	const frontmatter = parsedFrontmatter.data.frontmatter as BlogPostFrontmatter;
-	const slug = fileName.replace('svx', '');
+	const slug = fileName.replace('.svx', '');
 
 	feed.addItem({
 		title: frontmatter.title,
