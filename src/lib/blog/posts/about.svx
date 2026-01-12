@@ -1,0 +1,42 @@
+---
+title: About Me
+description: A more indepth explanation on who I am
+date: 2026-01-11
+---
+
+Hello there! My name is metamethods -- or **meta** for short. I am currently a student within the confines of the United States of America who is continuously learning computer science day by day. 
+
+I mainly enjoy myself programming in [Roblox](https://create.roblox.com/) using the programming language [Luau](https://luau.org/); although, I try to learn other things outside of Roblox development in order to -- well -- prepare myself for environments where languages like Luau is not sufficient. I do have to say, I think I learn pretty fast once you give me all the required information that is needed. Enables me to easily learn new things at a much faster pace than other people -- so having to switch to a different game development platform should not be much of a hassle for me lol. 
+
+<details>
+    <summary> If you are curious about what computering things I know</summary>
+    <ul>
+        <li><a href="https://luau.org">Luau</a></li>
+        <li><a href="https://rust-lang.org">Rust</a></li>
+        <li><a href="https://www.typescriptlang.org/">Typescript (and Javascript)</a></li>
+        <li><a href="https://www.docker.com/">Docker</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Linux">Linux</a></li>
+        <li>And probably others that I might not remember</li>
+    </ul>
+</details>
+
+I also really enjoy making UI. A perfect example would have to be the website that **YOU** are currently on! I do wish I had more examples to show off to you, but I do not main UI design so..
+
+Some other things about me is that I am huge big fan of [rhythm games](https://en.wikipedia.org/wiki/Rhythm_game) -- especially the games that sega *(yes the same people who also made the blue headed headgehog)* released. Those games being: [Chunithm](https://chunithm.sega.com/), [Maimai](https://maimai.sega.com/), and [Ongeki](https://ongeki.sega.jp/). With that, it also gotten me into liking a diverse amount of rhythm game songs. A personal favorite of mine is [World's end BLACKBOX (full ver.)](https://youtu.be/cBiRO0eRTBQ?si=YsZ2gLkCuOT_kn6v) by [D-D-Dice](https://www.youtube.com/channel/UCw3baysP2Ufu6aAdgyl0Fcw) -- one of my **favorite** artist of all time.
+
+In conjunction of rhythm games, I am -- indeed -- a big fan of gacha games too. Mainly being [Blue Archive](https://en.wikipedia.org/wiki/Blue_Archive) due to its enjoyable main story.
+
+Welp, thats realy it about me. If you want to contact me for like *whatever reason*, you can find me on discord at `@metamethods` as I am the most active there. *I will most likley expand on this in the future at any point.*
+
+---
+
+As a wise person once said
+> Rob the poor cash out big
+
+:3
+
+<script>
+  let count = 0;
+</script>
+
+<button onclick={() => count++} class="px-4 py-3 bg-bg-1 rounded-lg">Evil ass clicks: {count}</button>
