@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+	font-family: 'Choco Cooky';
+	src: url('/fonts/choco-cooke.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@layer base {
+	:root {
+		/*--bg-0: oklch(0.97 0.01 310);
+		--bg-1: oklch(0.94 0.02 310);
+		--bg-2: oklch(0.89 0.03 310);
+		--text: oklch(0.25 0.04 295);
+		--accent: oklch(0.4662 0.234 305.26);*/
+
+		/*@variant dark {*/
+		--bg-0: oklch(0.2119 0.0079 297.16);
+		--bg-1: oklch(0.2885 0.0109 293.35);
+		--bg-2: oklch(0.3396 0.0069 293.35);
+		--border-0: oklch(0.3078 0.0072 297.41);
+		--text-0: oklch(0.9 0.0055 297.72);
+		--text-1: oklch(0.825 0.0175 297.38);
+		--text-2: oklch(0.65 0.0175 297.38);
+		--accent-0: oklch(0.8719 0.0868 311.76);
+		/*}*/
+
+		--icon-svelte: #ff845b;
+	}
+}
+
+@theme {
+	--font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
+	--font-choco-cooky: 'Choco Cooky', 'Comic Sans MS', cusrive;
+
+	--default-font-family: 'Plus Jakarta Sans', sans-serif;
+
+	--color-bg-0: var(--bg-0);
+	--color-bg-1: var(--bg-1);
+	--color-bg-2: var(--bg-2);
+	--color-border-0: var(--border-0);
+	--color-text-0: var(--text-0);
+	--color-text-1: var(--text-1);
+	--color-text-2: var(--text-2);
+	--color-accent-0: var(--accent-0);
+	--color-icon-svelte: var(--icon-svelte);
+}
+
+@utility prose-theme {
+	--tw-prose-body: theme(color.text-1);
+	--tw-prose-headings: theme(color.text-0);
+	--tw-prose-lead: theme(color.text-2);
+	--tw-prose-links: theme(color.accent-0);
+	--tw-prose-bold: theme(color.text-1);
+	--tw-prose-counters: theme(color.text-2);
+	--tw-prose-bullets: theme(color.text-2);
+	--tw-prose-hr: theme(color.border-0);
+	--tw-prose-quotes: theme(color.text-2);
+	--tw-prose-quote-borders: theme(color.border-0);
+	--tw-prose-captions: theme(color.text-2);
+	--tw-prose-code: theme(color.accent-0);
+	--tw-prose-pre-code: theme(color.text-1);
+	--tw-prose-pre-bg: theme(color.bg-1);
+	--tw-prose-th-borders: theme(color.border-0);
+	--tw-prose-td-borders: theme(color.border-0);
+	--tw-prose-kbd: theme(color.accent-0);
+
+	.shiki,
+	.shiki span {
+		background-color: theme(color.bg-1) !important;
+
+		@variant dark {
+			color: var(--shiki-dark) !important;
+			font-style: var(--shiki-dark-font-style) !important;
+			font-weight: var(--shiki-dark-font-weight) !important;
+			text-decoration: var(--shiki-dark-text-decoration) !important;
+		}
+	}
+
+	a {
+		@apply text-accent-0 underline decoration-accent-0/50 decoration-2 underline-offset-2 transition-[text-decoration-color] duration-300 hover:decoration-accent-0;
+	}
+
+	kbd {
+		@apply rounded-lg bg-bg-1 p-2;
+	}
+
+	img {
+		@apply rounded-lg border border-border-0;
+	}
+
+	@apply text-lg font-normal prose-h1:font-choco-cooky prose-h1:text-5xl prose-h1:font-normal prose-h2:font-choco-cooky prose-h2:text-4xl prose-h2:font-normal prose-h3:font-choco-cooky prose-h3:text-3xl prose-h3:font-normal prose-h4:font-choco-cooky prose-h4:text-2xl prose-h4:font-normal prose-h5:font-choco-cooky prose-h5:text-xl prose-h5:font-normal prose-h6:font-choco-cooky prose-h6:text-lg prose-h6:font-normal;
+}

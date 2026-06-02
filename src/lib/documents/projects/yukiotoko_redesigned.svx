@@ -1,0 +1,33 @@
+---
+title: yukiotoko redesigned
+description: redesigned webui of yukiotoko
+date: 2024-12-31
+technologies: [typescript]
+tags: [discord, sveltekit]
+draft: false
+featured: true
+thumbnails:
+    - src: yukiotoko/yukiotoko.webp
+      alt: example webui view of yukiotoko-redesigned
+urls:
+    github: https://github.com/metamethods/yukiotoko-redesigned
+---
+
+a realtively simple project that redesigns and localizes all yukiotoko instances that are being hosted -- with the
+exception that it requires me to add them manually
+
+the project was created to test my own web design skills but also to actually give something back to a pretty tight
+community *iykyk*
+
+## implementation
+
+the project started with a simple sveltekit project template, although, it looked pretty terrible and was **very**
+clunky. i dont have images of it, but just take my word haha
+
+i kinda left it like that for a while, until i got the motivation to rewrite it when i had the idea of using a discord
+bot to send live room updates. i got to work right away and converted the project into a monorepo. to make the discord
+bot and the website work together easily, i created a service to be like the main controller of room data. it uses a
+websocket, that clients can connect to, and it'll send out events if a room got added, removed, or updated. this
+method of implementation allowed me to easily centeralize stuff and i can easily add filters and whatnot. the frontend
+still uses sveltekit -- my beloved -- and a pretty simple discord bot script that connects to the websocket and sends
+messages based on the servers its added in

@@ -1,0 +1,135 @@
+---
+title: hello internet!
+description: as the title says
+date: 2026-05-29
+draft: false
+thumbnail:
+  src: hello_internet.webp
+  alt: blue archive characters from abyods
+---
+
+this is my little test document for the whole world to see! thank you for checking this out.
+
+enjoy my little things below:
+
+<script>
+    let count = $state(0);
+</script>
+
+<button onclick={() => count++} class="px-3 py-2 bg-bg-1 rounded-lg hover:bg-bg-2 transition-colors text-text-0 mb-8">click me! clicked {count} times</button>
+
+# h1
+
+## h2
+
+### h3
+
+#### h4
+
+##### h5
+
+###### h6
+
+|a|b|c|
+|-|-|-|
+|hello|world|goodbye|
+|e|f|g|
+
+- one
+- two
+  - three
+
+1. four
+2. and five
+
+[google!](https://google.com/)
+
+- [ ] cool
+- [x] awesome
+
+<details>
+  <summary>do not click!!</summary>
+  evil text
+</details>
+
+`woahhh`
+
+<kbd>alt</kbd> + <kbd>F4</kbd> NOW
+
+**i am the bold**
+
+*and i am the slant*
+
+<sub>evil sub</sub>
+
+---
+
+# Undae est petentes maris
+
+## Percussit est
+
+Lorem markdownum furta coniciunt Astypaleia instigant aut `reimageHandle` faces
+praemia! Ossibus **paucaque rapidi** erant saepe frugis eadem; agnovique
+alternare tibi stringite?
+
+## Movet quod inquirit madefactus
+
+*Deprendere fortunaeque norat* nitor, brevis, iuvenem per ipse convaluit taurus
+votis, euntem. Mente capit et [numinis] sit cepit petii; excussae in.
+
+```
+if (netmask) {
+    softwareRoot = hardUpCopy(-4, cybersquatter_cgi);
+    circuitPci.snmp = chipDegauss;
+} else {
+    odbc_wiki = 3;
+    system_mac_capacity.drop_boot.cookie(kdeP, activeAdDos);
+}
+var software_hard_command = 40 + core_up(print_disk_adc);
+win += zebibyteFile;
+if (layoutGisUpnp(host) >= compact_bcc(golden_circuit)) {
+    hoverSyntaxScalable(megabit / t, mouse_olap_management, flash_surge);
+    yottabyte_dock = fileReadmeXmp;
+    boot_bitmap *= 23;
+} else {
+    impactReadme(undo_boot_clock(p, stick_hacker), storage_vlb_redundancy(
+            stickDialogUtility), 1);
+}
+```
+
+## Ingens e reclusit
+
+Quis tacitaque cognita, cognovi cremarat fata, his corpore iunci: quo creditur
+fertur teneo te a humanos, atria. Philemon adhaesi, et arte invergens dixit quam
+vive generosior suum fraternis perfudit, tulit! Namque nobis patefecit, qua
+ponto mota foret lacertis qua, *quoque squamis*: tenebat ortus: fugae victor
+qui. Dedit male, mundi concordi scire carissime et rursus.
+
+- A versus
+- Clitorio dolore
+- Altae suppositosque fronti tumefactum nostri
+
+## Corporeusque et eminet de
+
+Fugae coniunx et sinumque, tuo rapit, partesque, tamen. Adacta in lumina
+dolusque iam aspera in cognovit vestibus. *Ventos sis curvum* lacrimas sis amor
+rependis, suo loco! Vellet clivoque **de** quoque *sumptis* marmore praemia, in
+**innumeras finire indignave** et. Vultu **quoque coniunctior aura** seposuit,
+vidit est patrem `skin`, lux!
+
+## Frustra membraque iurgia caput
+
+Fecit `functionDdr` est nudum frondes, et ales Mycenae et quo; saevae bovem est
+postis! Fulminis qualem spumigeroque bene Priameia namque, nocturnos suo, nostra
+et.
+
+```
+enterprise(data_petaflops(45), 100);
+resolutionFlood = miniWhitelistPrinter;
+downloadOsiPrinter = queue_host_nvram.page_jre(2 - 4, 2, spreadsheet);
+var site = language.fileCursorBounce(ntfs_io_text(superscalarCookieDevice,
+        disk_wpa(21), -5), bootSsid, dv * lock_edi_system);
+if (4 < ipad_hover(irq_web_record(title, 59, snippet), metafileBinary)) {
+    ram.cyberspaceMultimedia += 5 + qwertyHeaderCc;
+}
+```

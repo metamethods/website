@@ -1,0 +1,28 @@
+---
+title: site redesign
+description: doing the silly redesign of my portfolio website
+date: 2026-05-30
+draft: false
+thumbnail:
+  src: site_redesign.webp
+  alt: my site header
+---
+
+<script>
+  import siteImage from '$lib/assets/images/posts/site_redesign/site.webp?w=1000&enhanced';
+</script>
+
+after like a year i guess?? finally got to remaking my whole portfolio.
+took me a bit to get some of the design aspects of it down, but finally found something that i like; something that more represents who i am as a person haha
+
+the main stylistic choice was using a modified version of the android font, Choco Cooke, to represent the sillines of me
+
+i also took this opportunity to kinda rewrite some stuff. now the site is statically built!!
+
+anyhows, final result of it looks snazzy (imo)
+
+<div>
+  <enhanced:img src={siteImage} alt="current site state" class="w-full" />
+</div>
+
+oh yeah, the profile image was drawn by [u/mamieru](https://www.reddit.com/user/mamieru/)
